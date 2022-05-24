@@ -1,0 +1,33 @@
+<div *ngIf="user" class="chatPanel">
+    <h2>{{user.name}}</h2>
+
+    <!-- <div class="chat">
+        <div class="chatInput">
+            <input id="chatInput" [(ngModel)]="message" placeholder="message">
+            <button type="button" (click)="send()">send</button>
+        </div>
+        <ul class="messages" (scroll)="scroll()" #scrollArea>
+            <li class="message" *ngFor="let message of messages">
+                <span>{{message.from}}</span>: {{message.message}}
+            </li>
+        </ul>
+    </div> -->
+
+    <ul class="messages" (scroll)="scroll()" #scrollArea>
+        <li class="message" *ngFor="let message of messages">
+            <span>{{message.from}}</span>: {{message.message}}
+        </li>
+    </ul>
+    <div class="chatInput">
+        <input id="chatInput" [(ngModel)]="message" placeholder="message">
+        <button type="button" (click)="send()">send</button>
+    </div>
+</div>
+
+<div *ngIf="user==null" class="chatPanel">
+    <h2>Chat Panel</h2>
+
+    <div class="chat">
+        
+    </div>
+</div>

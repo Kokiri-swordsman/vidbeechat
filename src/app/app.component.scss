@@ -1,0 +1,26 @@
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color:#202225;
+    color:white;
+}
+
+.app h4 {
+    margin:0px;
+}
+
+.content {
+    display: flex;
+    height: calc(100% - 18px);
+    width: 100%;
+    background-color: #36393F;
+}
+
+app-chat {
+    flex-grow: 1;
+}
+
+input {
+    background-color:#40444B;
+}

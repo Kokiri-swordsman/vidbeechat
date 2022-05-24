@@ -1,0 +1,12 @@
+<div class="userList">
+  <h2>user list</h2>
+    <div class="users">
+      <span *ngFor="let user of users">
+        <div *ngIf="user.name != this.ownUser.name">
+          <button [class.selected]="user.name == selectedUser?.name" type="button" class="selectUser" (click)="onSelect(user)">
+            {{user.name}}
+          </button>
+        </div>
+        </span>
+    </div>
+</div>

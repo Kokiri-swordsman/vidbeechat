@@ -1,0 +1,29 @@
+<div class="app">
+  <h4>socket chat </h4>
+  <div class="modal"  *ngIf="this.ownUser.name == ''">
+    <div class="loginModal">
+      <input class="username" [(ngModel)]="userNameInput" placeholder="username">
+      <input class="pass" [(ngModel)]="passInput" placeholder="password">
+      <button type="button" (click)="login()">login</button>
+    </div>
+
+    <div class="registerModal">
+      <input class="username" [(ngModel)]="userNameInput" placeholder="username">
+      <input class="pass" [(ngModel)]="passInput" placeholder="password">
+      <button type="button" (click)="register()">register</button>
+    </div>
+  </div>
+
+  <div class="content" *ngIf="this.ownUser.name != ''">
+    <app-users 
+      [users]="this.users" 
+      [ownUser]="this.ownUser"
+      (selectUser)="selectUserHandler($event)">
+    </app-users>
+    <app-chat 
+      [messages]="filterByUser()" 
+      [user]="selectedUser" 
+      [service]="service">
+    </app-chat>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+.chatPanel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    // height: calc(100% - 44px);
+    height: 100%;
+    background-color: #36393F;
+}
+
+.chatPanel h2 {
+    margin: 0px;
+    padding: 8px 16px;
+    border: black;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    // position: fixed;
+    // width: 100%;
+    background-color: #36393F;
+}
+
+// .chat {
+//     display: flex;
+//     flex-direction: column-reverse;
+//     height: 100%;
+// }
+
+.chatInput {
+    display: flex;
+    height: 50px;
+}
+
+.chatInput input {
+    flex-grow: 1;
+    background-color: #40444B;
+}
+
+.messages {
+    overflow-y: auto;
+    margin: 0px;
+    height: 100%;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.message {
+    padding-top: 8px
+}
+
+.message:last-of-type {
+    padding-bottom:8px;
+}
+
+.message span {
+    font-weight: bold;
+}
